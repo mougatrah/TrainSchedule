@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 
+    <title>Train Scheduler</title>
+</head>
+<body >
+ 
+        <div class="jumbotron bg-primary text-light text-center">
+                <h2>TRAIN SCHEDULER</h2>
+            </div>
+
+    <div class="container-fluid" style="margin-top: 10px">
+
+        <div class="row m-auto border border-primary">
+            <label class="col-12 text-light bg-primary">Current Train Schedule</label>
+<div class="table-responsive">            
+    <table id="trainList" class="table">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away    </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td scope="row">Trans-Siberian</td>
+                        <td>Siberia</td>
+                        <td>60</td>
+                        <td>< 60</td>
+                        <td>SOON</td>
+                      </tr>
+                      
+                      
+                    </tbody>
+                  </table>
+                </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid" style="margin-top: 10px">
+            <div class="row m-auto border border-primary">
+
+                    <label class="col-12 text-light bg-primary">Add Train</label>
+                    
+                    <form id="addTrainForm" class="col-10 m-auto p-1">
+                  
+                        <label for="trainName" class="col-12">Train Name:</label>
+                        <input id="trainName" class="col-12 m-auto" required>
+                        
+                        <label for="destination" class="col-12">Destination:</label>
+                        <input id="destination" class="col-12" required>
+                        
+                        <label class="col-12">First Departure (HH:mm - military time):</label>
+                        <input id="firstDeparture" type="datetime" class="col-12" required>
+        
+                        <label class="col-12">Frequency (min):</label>
+                        <input id="frequency" type="number" class="col-12" required>
+
+                        <input type="submit" id="submitTrainBtn" class="btn btn-primary m-2" value="Submit">
+                </form>
+            </div>
+    
+        </div>
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="logic.js"></script>
+</body>
+</html>
