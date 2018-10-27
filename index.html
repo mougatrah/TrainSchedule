@@ -62,12 +62,13 @@
                         <input id="destination" class="col-12" required>
                         
                         <label class="col-12">First Departure (HH:mm - military time):</label>
-                        <input id="firstDeparture" type="datetime" class="col-12" required>
+                        <input id="hourInput" min="0" max="23" type="number" class="col-4" required><strong> :</strong>
+                        <input id="minInput" min="0" max="59" type="number" class="col-4" required>
         
                         <label class="col-12">Frequency (min):</label>
                         <input id="frequency" type="number" class="col-12" required>
 
-                        <input type="submit" id="submitTrainBtn" class="btn btn-primary m-2" value="Submit">
+                        <button type="submit" id="submitTrainBtn" class="btn btn-primary m-2" value="Submit">Submit</button>
                 </form>
             </div>
     
