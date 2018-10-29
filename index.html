@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
@@ -31,13 +33,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td scope="row">Trans-Siberian</td>
-                        <td>Siberia</td>
-                        <td>60</td>
-                        <td>< 60</td>
-                        <td>SOON</td>
-                      </tr>
+                    
                       
                       
                     </tbody>
@@ -56,18 +52,17 @@
                     
                     <form id="addTrainForm" class="col-10 m-auto p-1">
                   
-                        <label for="trainName" class="col-12">Train Name:</label>
-                        <input id="trainName" class="col-12 m-auto" required>
+                        <label for="trainName" class="col-12 m-1">Train Name:</label>
+                        <input id="trainName" placeholder="Choo Choo Express" class="col-12 m-auto" required>
                         
-                        <label for="destination" class="col-12">Destination:</label>
+                        <label for="destination" class="col-12 m-1">Destination:</label>
                         <input id="destination" class="col-12" required>
                         
-                        <label class="col-12">First Departure (HH:mm - military time):</label>
-                        <input id="hourInput" min="0" max="23" type="number" class="col-4" required><strong> :</strong>
-                        <input id="minInput" min="0" max="59" type="number" class="col-4" required>
+                        <label for="firstDeparture" class="col-14 m-1">First Departure (HH:mm):</label>
+                        <input id="firstDeparture" type="text" class="col-12" placeholder="HH:mm"required>
         
-                        <label class="col-12">Frequency (min):</label>
-                        <input id="frequency" type="number" class="col-12" required>
+                        <label for="frequency" class="col-12 m-1">Frequency (min):</label>
+                        <input id="frequency" min="0" type="number" placeholder="#" class="col-12" required>
 
                         <button type="submit" id="submitTrainBtn" class="btn btn-primary m-2" value="Submit">Submit</button>
                 </form>
